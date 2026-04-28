@@ -1,0 +1,121 @@
+
+<style>
+  .ng { cursor: pointer; }
+  .ng:hover rect { opacity: .85; }
+</style>
+<svg width="100%" viewBox="0 0 680 900" role="img">
+  <title>Create roadmap and sessions — Ori user flow</title>
+  <desc>Detailed flow for how Ori builds a goal roadmap with milestones, habits, and a rolling session buffer</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="340" y="26" text-anchor="middle" style="font-size:15px;font-weight:500;fill:var(--color-text-primary)">Create roadmap &amp; sessions flow</text>
+
+  <text x="40" y="50" style="font-size:11px;fill:var(--color-text-secondary)">■ purple = user action</text>
+  <text x="200" y="50" style="font-size:11px;fill:var(--color-text-secondary)">■ teal = app / AI response</text>
+  <text x="390" y="50" style="font-size:11px;fill:var(--color-text-secondary)">■ gray = decision</text>
+
+  <!-- Step 1 -->
+  <g class="ng" onclick="sendPrompt('What inputs does Ori use to build a goal roadmap?')">
+    <rect x="120" y="64" width="440" height="64" rx="8" stroke-width="0.5" fill="#E1F5EE" stroke="#0F6E56"/>
+    <text x="340" y="84" text-anchor="middle" dominant-baseline="central" style="font-size:13px;font-weight:500;fill:#085041">1 · AI receives confirmed goal data</text>
+    <text x="340" y="102" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">Activity · start level · motivation type · hours/week · deadline · DoD</text>
+  </g>
+  <line x1="340" y1="128" x2="340" y2="152" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Step 2: scope check -->
+  <g class="ng" onclick="sendPrompt('How does Ori handle goals that take longer than 3 months?')">
+    <rect x="120" y="152" width="440" height="56" rx="8" stroke-width="0.5" fill="#E1F5EE" stroke="#0F6E56"/>
+    <text x="340" y="172" text-anchor="middle" dominant-baseline="central" style="font-size:13px;font-weight:500;fill:#085041">2 · AI checks goal scope</text>
+    <text x="340" y="190" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">If &gt; 3 months → splits into phases: Goal 1, Goal 2… (max 3 months each)</text>
+  </g>
+  <line x1="340" y1="208" x2="340" y2="232" stroke="#888780" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Decision: motivation -->
+  <g onclick="sendPrompt('How does motivation type change the milestone structure in Ori?')">
+    <rect x="200" y="232" width="280" height="44" rx="8" stroke-width="0.5" fill="#F1EFE8" stroke="#5F5E5A"/>
+    <text x="340" y="257" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#2C2C2A">Motivation type?</text>
+  </g>
+
+  <!-- Left: passion -->
+  <line x1="200" y1="254" x2="108" y2="296" stroke="#888780" stroke-width="1" marker-end="url(#arr)"/>
+  <text x="138" y="284" text-anchor="middle" style="font-size:10px;fill:var(--color-text-secondary)">Passion/fun</text>
+  <g class="ng" onclick="sendPrompt('What are project-based milestones in Ori?')">
+    <rect x="28" y="300" width="160" height="48" rx="6" stroke-width="0.5" fill="#D3D1C7" stroke="#5F5E5A"/>
+    <text x="108" y="318" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#2C2C2A">Open milestones</text>
+    <text x="108" y="334" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#5F5E5A">Flexible · project-based</text>
+  </g>
+
+  <!-- Right: fear -->
+  <line x1="480" y1="254" x2="572" y2="296" stroke="#888780" stroke-width="1" marker-end="url(#arr)"/>
+  <text x="540" y="284" text-anchor="middle" style="font-size:10px;fill:var(--color-text-secondary)">Necessity/fear</text>
+  <g class="ng" onclick="sendPrompt('What are structured milestones in Ori for necessity-driven goals?')">
+    <rect x="492" y="300" width="160" height="48" rx="6" stroke-width="0.5" fill="#D3D1C7" stroke="#5F5E5A"/>
+    <text x="572" y="318" text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:500;fill:#2C2C2A">Strict milestones</text>
+    <text x="572" y="334" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#5F5E5A">Academic · hard deadlines</text>
+  </g>
+
+  <!-- Merge -->
+  <line x1="108" y1="348" x2="108" y2="382" stroke="#888780" stroke-width="0.8"/>
+  <line x1="572" y1="348" x2="572" y2="382" stroke="#888780" stroke-width="0.8"/>
+  <line x1="108" y1="382" x2="340" y2="382" stroke="#888780" stroke-width="0.8"/>
+  <line x1="572" y1="382" x2="340" y2="382" stroke="#888780" stroke-width="0.8"/>
+  <line x1="340" y1="382" x2="340" y2="404" stroke="#888780" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Step 3: milestones created -->
+  <g class="ng" onclick="sendPrompt('How many milestones does Ori suggest per goal?')">
+    <rect x="120" y="404" width="440" height="56" rx="8" stroke-width="0.5" fill="#E1F5EE" stroke="#0F6E56"/>
+    <text x="340" y="424" text-anchor="middle" dominant-baseline="central" style="font-size:13px;font-weight:500;fill:#085041">3 · AI creates 3–6 milestones</text>
+    <text x="340" y="442" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">Each with date range, estimated sessions count, definition of done</text>
+  </g>
+  <line x1="340" y1="460" x2="340" y2="484" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Step 4: habits -->
+  <g class="ng" onclick="sendPrompt('What are supporting habits in Ori and how are they linked to a goal?')">
+    <rect x="120" y="484" width="440" height="56" rx="8" stroke-width="0.5" fill="#E1F5EE" stroke="#0F6E56"/>
+    <text x="340" y="504" text-anchor="middle" dominant-baseline="central" style="font-size:13px;font-weight:500;fill:#085041">4 · AI proposes supporting habits</text>
+    <text x="340" y="522" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">Linked to emotional hook · anchored to daily triggers in user's routine</text>
+  </g>
+  <line x1="340" y1="540" x2="340" y2="564" stroke="#534AB7" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Step 5: user reviews -->
+  <g class="ng" onclick="sendPrompt('How can users edit the Ori roadmap before confirming?')">
+    <rect x="120" y="564" width="440" height="64" rx="8" stroke-width="0.5" fill="#EEEDFE" stroke="#534AB7"/>
+    <text x="340" y="584" text-anchor="middle" dominant-baseline="central" style="font-size:13px;font-weight:500;fill:#3C3489">5 · User reviews roadmap &amp; habits</text>
+    <text x="340" y="602" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#534AB7">Request more detail (+milestones) or rough plan (−milestones)</text>
+    <text x="340" y="616" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#534AB7">Edits via AI chat or direct edit — then confirms</text>
+  </g>
+  <line x1="340" y1="628" x2="340" y2="652" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Step 6: buffer -->
+  <g class="ng" onclick="sendPrompt('What is the Buffer in Ori and how does it generate sessions?')">
+    <rect x="80" y="652" width="520" height="80" rx="8" stroke-width="0.5" fill="#E1F5EE" stroke="#0F6E56"/>
+    <text x="340" y="672" text-anchor="middle" dominant-baseline="central" style="font-size:13px;font-weight:500;fill:#085041">6 · AI creates first 3–5 day Buffer of sessions</text>
+    <text x="340" y="690" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">Each session: Title · Why · Checklist (3–5 steps) · Resource link · DoD · cognitive load</text>
+    <text x="340" y="706" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">Types: Deep Work (45–90 min) · Practice (30–60 min) · Quick Win (15–30 min)</text>
+  </g>
+  <line x1="340" y1="732" x2="340" y2="756" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Step 7: calendar placement -->
+  <g class="ng" onclick="sendPrompt('How does Ori schedule sessions across the 4 calendar layers?')">
+    <rect x="80" y="756" width="520" height="64" rx="8" stroke-width="0.5" fill="#E1F5EE" stroke="#0F6E56"/>
+    <text x="340" y="776" text-anchor="middle" dominant-baseline="central" style="font-size:13px;font-weight:500;fill:#085041">7 · Sessions placed in calendar (4-layer logic)</text>
+    <text x="340" y="794" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">A: Fixed blocks → B: Habits → C: Sessions → D: Ad-hoc tasks</text>
+    <text x="340" y="808" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#0F6E56">Hardest sessions at peak energy · integrates with Google / Apple / Microsoft</text>
+  </g>
+  <line x1="340" y1="820" x2="340" y2="844" stroke="#534AB7" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Step 8: rolling buffer loop -->
+  <g class="ng" onclick="sendPrompt('How does Ori generate new sessions as old ones are completed?')">
+    <rect x="120" y="844" width="440" height="40" rx="8" stroke-width="0.5" fill="#EEEDFE" stroke="#534AB7"/>
+    <text x="340" y="865" text-anchor="middle" dominant-baseline="central" style="font-size:12px;font-weight:500;fill:#3C3489">8 · Session completed → AI queues next · Buffer stays 3–5 days ahead</text>
+  </g>
+  <!-- Loop back arrow -->
+  <line x1="120" y1="864" x2="60" y2="864" stroke="#534AB7" stroke-width="0.8"/>
+  <line x1="60" y1="864" x2="60" y2="662" stroke="#534AB7" stroke-width="0.8"/>
+  <line x1="60" y1="662" x2="80" y2="662" stroke="#534AB7" stroke-width="0.8" marker-end="url(#arr)"/>
+  <text x="46" y="762" text-anchor="middle" style="font-size:10px;fill:#534AB7;writing-mode:vertical-lr">rolling loop</text>
+</svg>
