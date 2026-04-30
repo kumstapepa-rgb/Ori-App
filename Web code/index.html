@@ -85,32 +85,9 @@
         body { font-family: 'Inter', sans-serif; }
         .glow-primary { box-shadow: 0 0 20px rgba(219, 144, 255, 0.4); }
         .glass-panel {
-            background: rgba(8, 12, 22, 0.6);
+            background: rgba(12, 19, 38, 0.6);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-        }
-        .step-line {
-            height: 2px;
-            background-image: linear-gradient(90deg, rgba(219,144,255,0.38) 0%, rgba(255,255,255,0.14) 45%, rgba(255,106,159,0.36) 100%);
-            background-size: 24px 2px;
-            animation: dash 4s linear infinite;
-        }
-        .step-dot {
-            width: 2rem;
-            height: 2rem;
-            border-radius: 9999px;
-            border: 2px solid rgba(255,255,255,0.18);
-            background-color: rgba(8, 12, 22, 0.95);
-            box-shadow: 0 0 0 8px rgba(255,255,255,0.04);
-        }
-        .step-dot.prim { border-color: rgba(219, 144, 255, 0.98); box-shadow: 0 0 0 10px rgba(219, 144, 255, 0.12); }
-        .step-dot.sec { border-color: rgba(255, 106, 159, 0.98); box-shadow: 0 0 0 10px rgba(255, 106, 159, 0.12); }
-        .step-dot.ter { border-color: rgba(182, 255, 237, 0.98); box-shadow: 0 0 0 10px rgba(182, 255, 237, 0.12); }
-        .step-card-top { top: calc(50% - 18.75rem); }
-        .step-card-bottom { top: calc(50% + 1.25rem); }
-        @keyframes dash {
-            from { background-position: 0 0; }
-            to { background-position: 36px 0; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
@@ -261,53 +238,6 @@
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
             </div>
         </section>
-        <!-- Stats Section -->
-        <section class="py-24 relative overflow-hidden fade-in-up delay-1 opacity-0">
-            <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none -z-10"></div>
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="relative rounded-[2.5rem] border border-outline-variant/10 bg-surface-container-lowest/95 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.32)]">
-                    <div class="text-center mb-14">
-                    <span class="text-sm uppercase tracking-[0.32em] text-on-surface-variant">Current situation</span>
-                    <h2 class="font-headline text-3xl md:text-4xl font-bold mt-6 text-on-surface">The barrier between ambition and action</h2>
-                </div>
-                <div class="grid gap-6 md:grid-cols-3">
-                    <div class="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-[#0b1220]/85 p-8 shadow-[0_18px_45px_rgba(10,14,34,0.28)] card-hover">
-                        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-secondary"></div>
-                        <div class="flex items-center justify-between mb-6 relative z-10">
-                            <span class="text-xs uppercase tracking-[0.24em] text-primary font-semibold">01 — What to do next</span>
-                            <span class="h-2 w-14 rounded-full bg-gradient-to-r from-primary to-secondary"></span>
-                        </div>
-                        <div class="relative z-10 text-[clamp(2rem,4vw,3.5rem)] font-black leading-none text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">67%</div>
-                        <p class="text-on-surface-variant mt-4 text-sm leading-relaxed relative z-10">of “side-venturers” report experiencing chronic burnout</p>
-                        <p class="text-on-surface-variant mt-6 text-sm leading-relaxed relative z-10">The drive to build something meaningful exists in nearly half the market, but it is hitting a wall of systemic exhaustion. Side-hustlers are essentially working two jobs with only one brain’s worth of cognitive energy.</p>
-                        <div class="mt-8 border-t border-outline-variant/15 pt-4 text-[11px] uppercase tracking-[0.24em] text-on-surface-variant relative z-10">Deloitte Gen Z and Millennial Survey (2024).</div>
-                    </div>
-                    <div class="relative overflow-hidden rounded-[2rem] border border-secondary/20 bg-[#0b1220]/85 p-8 shadow-[0_18px_45px_rgba(10,14,34,0.28)] card-hover">
-                        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-secondary to-tertiary"></div>
-                        <div class="flex items-center justify-between mb-6 relative z-10">
-                            <span class="text-xs uppercase tracking-[0.24em] text-secondary font-semibold">02 — Decision Fatigue</span>
-                            <span class="h-2 w-14 rounded-full bg-gradient-to-r from-secondary to-tertiary"></span>
-                        </div>
-                        <div class="relative z-10 text-[clamp(2rem,4vw,3.5rem)] font-black leading-none text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary">80%</div>
-                        <p class="text-on-surface-variant mt-4 text-sm leading-relaxed relative z-10">of population struggle to start personal tasks after work due to “Decision Fatigue”</p>
-                        <p class="text-on-surface-variant mt-6 text-sm leading-relaxed relative z-10">The willpower is there, but the bandwidth is spent. 80% of achievers struggle to start personal tasks because they are battling cognitive depletion before they even reach their desks.</p>
-                        <div class="mt-8 border-t border-outline-variant/15 pt-4 text-[11px] uppercase tracking-[0.24em] text-on-surface-variant relative z-10">Founder reports / Harvard Business Review</div>
-                    </div>
-                    <div class="relative overflow-hidden rounded-[2rem] border border-tertiary/20 bg-[#0b1220]/85 p-8 shadow-[0_18px_45px_rgba(10,14,34,0.28)] card-hover">
-                        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-tertiary to-primary"></div>
-                        <div class="flex items-center justify-between mb-6 relative z-10">
-                            <span class="text-xs uppercase tracking-[0.24em] text-tertiary font-semibold">03 — Drop-off</span>
-                            <span class="h-2 w-14 rounded-full bg-gradient-to-r from-tertiary to-primary"></span>
-                        </div>
-                        <div class="relative z-10 text-[clamp(2rem,4vw,3.5rem)] font-black leading-none text-transparent bg-clip-text bg-gradient-to-r from-tertiary to-primary">62%</div>
-                        <p class="text-on-surface-variant mt-4 text-sm leading-relaxed relative z-10">of people abandon their goals within the first month</p>
-                        <p class="text-on-surface-variant mt-6 text-sm leading-relaxed relative z-10">Static plans can't adapt to real life — missed milestones create guilt spirals, not corrections. Without a system that adjusts dynamically, even motivated people give up.</p>
-                        <div class="mt-8 border-t border-outline-variant/15 pt-4 text-[11px] uppercase tracking-[0.24em] text-on-surface-variant relative z-10">Statista Gig Economy 2024 · Statista Europe 2024</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
         <!-- Problem Section -->
         <section class="bg-surface-container-lowest py-24 border-y border-outline-variant/10 relative overflow-hidden fade-in-up delay-1 opacity-0">
             <!-- Ambient Background -->
@@ -398,120 +328,8 @@
                 </div>
             </div>
         </section>
-        <!-- Process Section -->
-        <section class="py-24 max-w-6xl mx-auto px-6 fade-in-up delay-3 opacity-0 relative">
-            <div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-[20px] rounded-[3rem] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] -z-10"></div>
-            <div class="relative rounded-[2.5rem] border border-outline-variant/10 bg-surface-container-lowest/95 p-10 shadow-[0_35px_90px_rgba(15,20,42,0.32)] overflow-hidden">
-                <div class="text-center mb-14">
-                    <span class="text-sm uppercase tracking-[0.32em] text-on-surface-variant">How does Ori work?</span>
-                    <h2 class="font-headline text-3xl md:text-4xl font-bold mt-6 text-on-surface">A 5-step flow to keep you moving forward</h2>
-                </div>
-                <div class="relative pt-12 lg:min-h-[34rem]">
-                    <div class="absolute inset-x-0 top-[50%] h-[2px] bg-surface-container-highest/30 step-line z-10"></div>
-                    <div class="absolute left-[12.5%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
-                        <div class="step-dot prim flex items-center justify-center text-[11px] font-semibold text-white">01</div>
-                    </div>
-                    <div class="absolute left-[30%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
-                        <div class="step-dot sec flex items-center justify-center text-[11px] font-semibold text-white">02</div>
-                    </div>
-                    <div class="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
-                        <div class="step-dot ter flex items-center justify-center text-[11px] font-semibold text-white">03</div>
-                    </div>
-                    <div class="absolute left-[70%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
-                        <div class="step-dot prim flex items-center justify-center text-[11px] font-semibold text-white">04</div>
-                    </div>
-                    <div class="absolute left-[87.5%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
-                        <div class="step-dot sec flex items-center justify-center text-[11px] font-semibold text-white">05</div>
-                    </div>
-                    <div class="grid gap-6 lg:hidden">
-                        <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl min-h-[280px] flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="text-[11px] uppercase tracking-[0.3em] text-primary font-semibold mb-4">ONBOARD</div>
-                                <h3 class="text-2xl font-bold mb-4">Tell Ori about your goal.</h3>
-                                <p class="text-on-surface-variant text-sm leading-relaxed">Find with Ori your goal, starting point, motivation, time capacity, and deadline to set on, what you want to achieve</p>
-                            </div>
-                        </div>
-                        <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl min-h-[280px] flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="text-[11px] uppercase tracking-[0.3em] text-tertiary font-semibold mb-4">GUIDE</div>
-                                <h3 class="text-2xl font-bold mb-4">Zero planning overhead.</h3>
-                                <p class="text-on-surface-variant text-sm leading-relaxed">Your next session is already planed - matched to your energy. Deep Work when charged, Quick Win when low.</p>
-                            </div>
-                        </div>
-                        <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl min-h-[280px] flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="text-[11px] uppercase tracking-[0.3em] text-secondary font-semibold mb-4">LEARN</div>
-                                <h3 class="text-2xl font-bold mb-4">Gets sharper every session.</h3>
-                                <p class="text-on-surface-variant text-sm leading-relaxed">Every action, skip, and win trains Ori's model of you. Month 6 is a different product than Day 1.</p>
-                            </div>
-                        </div>
-                        <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl min-h-[280px] flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="text-[11px] uppercase tracking-[0.3em] text-secondary font-semibold mb-4">BUILD</div>
-                                <h3 class="text-2xl font-bold mb-4">Ori maps your roadmap</h3>
-                                <p class="text-on-surface-variant text-sm leading-relaxed">AI sequences milestones and creates sessions which guides you to achieve your goal around your real calendar.</p>
-                            </div>
-                        </div>
-                        <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl min-h-[280px] flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="text-[11px] uppercase tracking-[0.3em] text-primary font-semibold mb-4">ADAPT</div>
-                                <h3 class="text-2xl font-bold mb-4">Life changed? Ori re-routes.</h3>
-                                <p class="text-on-surface-variant text-sm leading-relaxed">Missed a week? Burned out? Ori rebuilds your path forward - no guilt, no starting over.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden lg:block">
-                        <div class="absolute step-card-top left-[12.5%] w-[24%] -translate-x-1/2">
-                            <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl h-[280px] flex flex-col justify-between card-hover">
-                                <div>
-                                    <div class="text-[11px] uppercase tracking-[0.3em] text-primary font-semibold mb-4">ONBOARD</div>
-                                    <h3 class="text-2xl font-bold mb-4">Tell Ori about your goal.</h3>
-                                    <p class="text-on-surface-variant text-sm leading-relaxed">Find with Ori your goal, starting point, motivation, time capacity, and deadline to set on, what you want to achieve</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute step-card-top left-[50%] w-[24%] -translate-x-1/2">
-                            <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl h-[280px] flex flex-col justify-between card-hover">
-                                <div>
-                                    <div class="text-[11px] uppercase tracking-[0.3em] text-tertiary font-semibold mb-4">GUIDE</div>
-                                    <h3 class="text-2xl font-bold mb-4">Zero planning overhead.</h3>
-                                    <p class="text-on-surface-variant text-sm leading-relaxed">Your next session is already planed - matched to your energy. Deep Work when charged, Quick Win when low.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute step-card-top left-[87.5%] w-[24%] -translate-x-1/2">
-                            <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl h-[280px] flex flex-col justify-between card-hover">
-                                <div>
-                                    <div class="text-[11px] uppercase tracking-[0.3em] text-secondary font-semibold mb-4">LEARN</div>
-                                    <h3 class="text-2xl font-bold mb-4">Gets sharper every session.</h3>
-                                    <p class="text-on-surface-variant text-sm leading-relaxed">Every action, skip, and win trains Ori's model of you. Month 6 is a different product than Day 1.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute step-card-bottom left-[30%] w-[30%] -translate-x-1/2">
-                            <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl h-[280px] flex flex-col justify-between card-hover">
-                                <div>
-                                    <div class="text-[11px] uppercase tracking-[0.3em] text-secondary font-semibold mb-4">BUILD</div>
-                                    <h3 class="text-2xl font-bold mb-4">Ori maps your roadmap</h3>
-                                    <p class="text-on-surface-variant text-sm leading-relaxed">AI sequences milestones and creates sessions which guides you to achieve your goal around your real calendar.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute step-card-bottom left-[70%] w-[30%] -translate-x-1/2">
-                            <div class="glass-panel p-8 rounded-[2rem] border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl h-[280px] flex flex-col justify-between card-hover">
-                                <div>
-                                    <div class="text-[11px] uppercase tracking-[0.3em] text-primary font-semibold mb-4">ADAPT</div>
-                                    <h3 class="text-2xl font-bold mb-4">Life changed? Ori re-routes.</h3>
-                                    <p class="text-on-surface-variant text-sm leading-relaxed">Missed a week? Burned out? Ori rebuilds your path forward - no guilt, no starting over.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- Mindset Section -->
-        <section class="mt-16 py-24 bg-surface-container-lowest border-y border-outline-variant/10 relative fade-in-up delay-4 opacity-0">
+        <section class="py-24 bg-surface-container-lowest border-y border-outline-variant/10 relative fade-in-up delay-3 opacity-0">
             <div class="max-w-4xl mx-auto px-6 text-center">
                 <span class="material-symbols-outlined text-4xl text-primary/40 mb-6 block">format_quote</span>
                 <p class="font-headline text-2xl md:text-4xl font-medium leading-relaxed text-on-surface">
